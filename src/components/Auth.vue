@@ -11,6 +11,7 @@
     <input type="password" name="password" id="input-password" v-model="password" @keyup.enter="handleLogin" />
 
     <button @click="handleLogin">Login</button>
+    <button @click="getBalance">check</button>
   </div>
 </template>
 
@@ -25,9 +26,20 @@ export default {
       keystoreName: '',
       password: '',
       privateKey: '',
+      balance: null,
     };
   },
   methods: {
+    // state를 초기화합니다.
+    resetState() {
+      this.keystoreData = null;
+      this.keystoreMsg = '';
+      this.keystoreName = '';
+      this.password = '';
+      this.privateKey = '';
+    },
+
+    // keystore를 사용자로부터 입력받습니다.
     keystoreImport(e) {
       const keystore = e.target.files[0];
       const fileReader = new FileReader();
@@ -42,7 +54,7 @@ export default {
           this.keystoreData = e.target.result;
           this.keystoreMsg = 'It is valid keystore. input your password.';
           // console.log('keystoreName', keystore.name);
-          // console.log('keystoreData', this.keystoreData);
+          console.log('keystoreData', this.keystoreData);
           // console.log('keystoreMsg', this.keystoreMsg);
           document.querySelector('#input-password').focus();
         } catch (error) {
@@ -59,6 +71,7 @@ export default {
       const isValidKeystore = version && id && address && keyring;
       return isValidKeystore;
     },
+
     // 지갑 로그인
     handleLogin() {
       const { keystoreData, password } = this;
@@ -76,11 +89,20 @@ export default {
         // 계정 객체를 이용해 계정을 인메모리 지갑에 추가
         caver.klay.accounts.wallet.add(walletInstance);
 
-        // 세션스토리지에 계정을 추가함 (브라우저 스토리지에 보관 하는 것은 비 권장되는 방법으로 추후에 수정하도록 할 것.)
+        // 세션스토리지에 계정을 추가함 (브라우저 스토리지에 보관 하는 것은 비 권장되는 방법으로 추후에 캡슐화 등으로 수정하도록 할 것.)
         sessionStorage.setItem('walletInstance', JSON.stringify(walletInstance));
+        this.resetState();
       } catch (error) {
         console.error(error);
       }
+    },
+
+    async getBalance() {
+      const address = JSON.parse(sessionStorage.getItem('walletInstance')).address;
+      if (!address) return;
+      //  주어진 지갑의 peb 단위 현재 잔액 -> 1 Klay 단위 현재 잔액으로 변환
+      await caver.klay.getBalance(address).then((balance) => (this.balance = caver.utils.fromPeb(balance, 'KLAY')));
+      console.log(this.balance);
     },
   },
 
