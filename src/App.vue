@@ -1,17 +1,27 @@
 <template>
-  <Auth />
+  <main class="AppWrapper">
+    <Login />
+  </main>
 </template>
 
 <script>
-import Auth from './components/Auth.vue';
-// import Connect from './components/ConnectKaikas.vue';
+import Login from './components/Login.vue';
 
 export default {
   components: {
-    Auth,
-    // Connect,
+    Login,
   },
 };
 </script>
 
-<style></style>
+<style>
+.AppWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vw;
+}
+p {
+  margin: 0;
+}
+</style>
