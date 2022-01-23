@@ -1,12 +1,14 @@
-# Kaikas klaytn value check extension
-
 ## 목적
 
-- KAS에서 제공하는 개발자용 Kaikas keystore를 이용한 잔액 확인 하는 크롬익스텐션 제작 중
+- KAS에서 제공하는 keystore를 이용하여 다양한 기능을 제공하는 크롬익스텐션  
 
-### 추가 구현 계획 순서
+<br />
 
-1. Kaikas 지갑 불러오기 (KAS keystore 이용, 추후엔 일반적인 지갑 연결도 추가해 볼 예정)
-2. 토큰 가격 차트
-3. 토큰 가격 알리미
-4. 그 외 비밀 기능...
+  ### 구현 계획 순서
+  **1. Kaikas 지갑 불러오기** (KAS keystore 이용, 추후엔 일반적인 지갑 연결도 추가해 볼 예정)  
+  2. 지갑 잔고 불러오기  
+  3. klaytn 현재 시세 불러오기  
+  4. chrome extension 으로 제작  
+  5. 토큰 가격 차트  
+  6. 토큰 가격 알리미  
+  7. 그 외 추가 기능...  
