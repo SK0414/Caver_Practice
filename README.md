@@ -1,24 +1,12 @@
-# kaikas_extension
+# Kaikas klaytn value check extension
 
-## Project setup
-```
-npm install
-```
+## 목적
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+- KAS에서 제공하는 개발자용 Kaikas keystore를 이용한 잔액 확인 하는 크롬익스텐션 제작 중
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### 추가 구현 계획 순서
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+1. Kaikas 지갑 불러오기 (KAS keystore 이용, 추후엔 일반적인 지갑 연결도 추가해 볼 예정)
+2. 토큰 가격 차트
+3. 토큰 가격 알리미
+4. 그 외 비밀 기능...

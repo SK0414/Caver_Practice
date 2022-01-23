@@ -1,28 +1,17 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <Auth />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Auth from './components/Auth.vue';
+// import Connect from './components/ConnectKaikas.vue';
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    Auth,
+    // Connect,
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>
