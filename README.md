@@ -1,6 +1,6 @@
 ## 목적
 
-- KAS에서 제공하는 keystore를 이용하여 다양한 기능을 제공하는 크롬익스텐션  
+Klaytn, Kaikas Library Caver 실습
 
 <br />
 
