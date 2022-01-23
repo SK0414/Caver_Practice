@@ -2,6 +2,8 @@
 
 Klaytn, Kaikas Library Caver 실습
 
+src - component - Login.vue 에 로직이 위치하여있습니다.
+
 <br />
 
 ### 구현 계획 순서
@@ -19,6 +21,6 @@ Klaytn, Kaikas Library Caver 실습
 4. klaytn 현재 시세 불러오기  
 ---
 
-5. 토큰 가격 차트  
-6. 토큰 가격 알리미  
+5. 토큰 가격 알리미  
+6. 토큰 가격 차트  
 7. 그 외 추가 기능...  
