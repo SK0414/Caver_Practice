@@ -18,7 +18,7 @@ src - component - Login.vue 에 로직이 위치하여있습니다.
 ![화면 기록 2022-01-24 오전 12 39 09 mov](https://user-images.githubusercontent.com/87772236/150686575-1ffb16bd-890e-49ce-a4a0-f551f594e0c0.gif)
 
 ### **작업중**  
-4. klaytn 현재 시세 불러오기  
+4. klaytn, dAPP 토큰 현재 시세 불러오기  
 ---
 
 5. 토큰 가격 알리미  
