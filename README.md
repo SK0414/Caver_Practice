@@ -2,8 +2,7 @@
 
 Klaytn, Kaikas Library Caver 실습
 
-src - component - Login.vue 에 로직이 위치하여있습니다.
-
+src - component - Login.vue
 <br />
 
 ### 구현 계획 순서
